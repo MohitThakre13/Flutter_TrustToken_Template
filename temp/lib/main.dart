@@ -71,6 +71,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    final _textcontroller = TextEditingController();
     // This method is rerun every time setState is called, for instance as done
     // by the _incrementCounter method above.
     //
@@ -91,6 +92,7 @@ class _MyHomePageState extends State<MyHomePage> {
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
         child: Column(
+          
           // Column is also a layout widget. It takes a list of children and
           // arranges them vertically. By default, it sizes itself to fit its
           // children horizontally, and tries to be as tall as its parent.
@@ -106,12 +108,29 @@ class _MyHomePageState extends State<MyHomePage> {
           // wireframe for each widget.
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            TextField(
-
-            ),
             const Text(
-              'Click to login in the application',
+              '1. Detect the token.\n2. Login with your credentials.',
+              style: TextStyle(fontSize: 20),
             ),
+            Padding(padding: EdgeInsets.all(10)),
+            Container(
+              padding: EdgeInsets.symmetric(horizontal: 20),
+              child: TextField(
+                controller: _textcontroller,
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(borderSide: BorderSide()),
+                  hintText: "Enter the pin",
+                  suffixIcon: IconButton(
+                      onPressed: (){
+                        _textcontroller.clear();
+                      },
+                      icon: Icon(Icons.clear)),
+
+                ),
+              
+              ),
+            ),
+
             Padding(padding: EdgeInsets.all(10)),
             // Text(
             //   '$_counter',
@@ -120,7 +139,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ElevatedButton(
               onPressed: () async {
                 UsbManager s = new UsbManager();
-                var k2 = await s.loginTrustToken("123457");
+                var k2 = await s.loginTrustToken(_textcontroller.text);
                 print(k2);
               },
               child: Text("Login"),

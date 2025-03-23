@@ -1,0 +1,27 @@
+{
+  "buildFiles": [
+    "/home/mohitt/Desktop/Flutter_TrustToken_Template/temp/android/app/src/main/cpp/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/usr/bin/ninja",
+      "-C",
+      "/home/mohitt/Desktop/Flutter_TrustToken_Template/temp/android/app/.cxx/Debug/625o471i/armeabi-v7a",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/usr/bin/ninja",
+    "-C",
+    "/home/mohitt/Desktop/Flutter_TrustToken_Template/temp/android/app/.cxx/Debug/625o471i/armeabi-v7a",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "native-lib::@6890427a1f51a3e7e1df": {
+      "artifactName": "native-lib",
+      "abi": "armeabi-v7a",
+      "output": "/home/mohitt/Desktop/Flutter_TrustToken_Template/temp/build/app/intermediates/cxx/Debug/625o471i/obj/armeabi-v7a/libnative-lib.so",
+      "runtimeFiles": []
+    }
+  }
+}

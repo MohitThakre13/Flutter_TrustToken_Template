@@ -356,7 +356,7 @@ class UsbManager {
 
   Future<String> loginTrustToken(String pin) async {
     try {
-      final fileDescriptor = await platform.invokeMethod('login', {'pin': '123456'});
+      final fileDescriptor = await platform.invokeMethod('login', {'pin': pin});
 
       return fileDescriptor;
     } on PlatformException catch (e) {
