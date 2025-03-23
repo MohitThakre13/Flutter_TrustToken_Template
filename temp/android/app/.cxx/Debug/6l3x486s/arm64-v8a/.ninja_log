@@ -1,0 +1,14 @@
+# ninja log v5
+0	565	1742576867480789844	CMakeFiles/native-lib.dir/native-lib.cpp.o	278a3e4ad63e138e
+566	599	1742576867513914932	/home/mohitt/AndroidStudioProjects/temp/build/app/intermediates/cxx/Debug/6l3x486s/obj/arm64-v8a/libnative-lib.so	fad13f6124a617d5
+3	43	1742580185405646493	/home/mohitt/AndroidStudioProjects/temp/build/app/intermediates/cxx/Debug/6l3x486s/obj/arm64-v8a/libnative-lib.so	fad13f6124a617d5
+2	608	1742635041920536037	CMakeFiles/native-lib.dir/native-lib.cpp.o	278a3e4ad63e138e
+608	793	1742635042103603896	/home/mohitt/AndroidStudioProjects/temp/build/app/intermediates/cxx/Debug/6l3x486s/obj/arm64-v8a/libnative-lib.so	fad13f6124a617d5
+2	283	1742638982512399302	CMakeFiles/native-lib.dir/native-lib.cpp.o	278a3e4ad63e138e
+283	307	1742638982536399067	/home/mohitt/AndroidStudioProjects/temp/build/app/intermediates/cxx/Debug/6l3x486s/obj/arm64-v8a/libnative-lib.so	fad13f6124a617d5
+1	285	1742639040204841313	CMakeFiles/native-lib.dir/native-lib.cpp.o	278a3e4ad63e138e
+285	310	1742639040228841083	/home/mohitt/AndroidStudioProjects/temp/build/app/intermediates/cxx/Debug/6l3x486s/obj/arm64-v8a/libnative-lib.so	fad13f6124a617d5
+1	293	1742639237973620888	CMakeFiles/native-lib.dir/native-lib.cpp.o	278a3e4ad63e138e
+293	319	1742639237999619350	/home/mohitt/AndroidStudioProjects/temp/build/app/intermediates/cxx/Debug/6l3x486s/obj/arm64-v8a/libnative-lib.so	fad13f6124a617d5
+1	343	1742639768596854989	CMakeFiles/native-lib.dir/native-lib.cpp.o	278a3e4ad63e138e
+343	370	1742639768622854173	/home/mohitt/AndroidStudioProjects/temp/build/app/intermediates/cxx/Debug/6l3x486s/obj/arm64-v8a/libnative-lib.so	fad13f6124a617d5
