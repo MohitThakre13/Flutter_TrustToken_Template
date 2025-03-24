@@ -1,1 +1,0 @@
-/home/mohitt/AndroidStudioProjects/temp/build/app/intermediates/cxx/Debug/6l3x486s/obj/armeabi-v7a

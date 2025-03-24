@@ -1,3 +1,0 @@
-/home/mohitt/Desktop/Flutter_TrustToken_Template/temp/android/app/.cxx/Debug/625o471i/armeabi-v7a/CMakeFiles/native-lib.dir
-/home/mohitt/Desktop/Flutter_TrustToken_Template/temp/android/app/.cxx/Debug/625o471i/armeabi-v7a/CMakeFiles/edit_cache.dir
-/home/mohitt/Desktop/Flutter_TrustToken_Template/temp/android/app/.cxx/Debug/625o471i/armeabi-v7a/CMakeFiles/rebuild_cache.dir

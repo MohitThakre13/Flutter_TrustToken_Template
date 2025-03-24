@@ -1,3 +1,0 @@
-/home/mohitt/AndroidStudioProjects/temp/android/app/.cxx/Debug/6l3x486s/x86/CMakeFiles/native-lib.dir
-/home/mohitt/AndroidStudioProjects/temp/android/app/.cxx/Debug/6l3x486s/x86/CMakeFiles/edit_cache.dir
-/home/mohitt/AndroidStudioProjects/temp/android/app/.cxx/Debug/6l3x486s/x86/CMakeFiles/rebuild_cache.dir
