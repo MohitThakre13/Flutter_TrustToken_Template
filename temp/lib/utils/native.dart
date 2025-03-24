@@ -363,6 +363,16 @@ class UsbManager {
       print("Failed to login to the trustToken: '${e.message}'.");
       return "-1";
     }
+
+  }
+  Fututre<String> encryptData(String data) async {
+    try {
+      final encryptedData = await platform.invokeMethod('encryptData', {'data': data});
+      return encryptedData;
+    } on PlatformException catch (e) {
+      print("Failed to encrypt data: '${e.message}'.");
+      return "-1";
+    }
   }
 }
 

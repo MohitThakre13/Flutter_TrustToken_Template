@@ -88,6 +88,13 @@ class MainActivity: FlutterActivity(), CoroutineScope {
                 }
 
             }
+            else if(call.method == "encrypt"){
+                val  data = call.argument<String>("data") ?: ""
+                if(data.length == 0)
+                    result.error("Invalid Data", "Please enter a valid data", null)
+                vat encryptedData = encryptData(data)
+                result.success(encryptedData)
+            }
             else if(call.method == "getFileDescriptor") {
                 fileDescriptor = detectSmartCard()
                 if (fileDescriptor == 1)
