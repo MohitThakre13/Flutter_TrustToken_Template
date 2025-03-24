@@ -92,8 +92,25 @@ class MainActivity: FlutterActivity(), CoroutineScope {
                 val  data = call.argument<String>("data") ?: ""
                 if(data.length == 0)
                     result.error("Invalid Data", "Please enter a valid data", null)
-                vat encryptedData = encryptData(data)
+                var encryptedData = encrypt(data)
                 result.success(encryptedData)
+            }
+            else if(call.method == "decrypt")
+            {
+                val  data = call.argument<String>("data") ?: ""
+                if(data.length == 0)
+                    result.error("Invalid Data", "Please enter a valid data", null)
+                var decryptedData = decrypt(data)
+                result.success(decryptedData)
+            }
+            else if(call.method == "readCertificate") {
+                val hexData = readCertificate()
+                if(!Regex("^[0-9A-Fa-f]+\$").matches(hexData)){
+                    result.error("Error Occured", "Try again by restarting the app", null)
+                    return@setMethodCallHandler
+                }
+                val cert = getCertificateDetails(hexData)
+                result.success(cert)
             }
             else if(call.method == "getFileDescriptor") {
                 fileDescriptor = detectSmartCard()
@@ -104,6 +121,22 @@ class MainActivity: FlutterActivity(), CoroutineScope {
             else if (call.method == "logout") {
                 val res = logout()
                 result.success(res)
+            }
+            else if(call.method == "sign")
+            {
+                val data = call.argument<String>("data") ?: ""
+                if(data.length == 0)
+                    result.error("Invalid Data", "Please enter a valid data", null)
+                val signedData = sign(data)
+                result.success(signedData)
+            }
+            else if(call.method == "verify")
+            {
+                val data = call.argument<String>("data") ?: ""
+                if(data.length == 0)
+                    result.error("Invalid Data", "Please enter a valid data", null)
+                val verifiedData = verify(data)
+                result.success(verifiedData)
             }
             else {
                 result.notImplemented()
@@ -281,5 +314,10 @@ class MainActivity: FlutterActivity(), CoroutineScope {
     external fun libint(fileDescriptor: Int): Int
     external fun readCertificate(): String
     external fun logout(): String
+    external fun encrypt(jstr: String): String
+    external fun decrypt(jstr: String): String
+    external fun readCertificate(): String
+    external fun sign(jstr: String): String
+    external fun verify(jstr: String, jstr: String): String
 }
 

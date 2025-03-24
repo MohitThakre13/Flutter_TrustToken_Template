@@ -365,7 +365,7 @@ class UsbManager {
     }
 
   }
-  Fututre<String> encryptData(String data) async {
+  Future<String> encryptData(String data) async {
     try {
       final encryptedData = await platform.invokeMethod('encryptData', {'data': data});
       return encryptedData;
@@ -374,5 +374,37 @@ class UsbManager {
       return "-1";
     }
   }
+
+  Future<String> decryptData(String data) async {
+    try {
+      final decryptedData = await platform.invokeMethod('decryptData', {'data': data});
+      return decryptedData;
+    } on PlatformException catch (e) {
+      print("Failed to decrypt data: '${e.message}'.");
+      return "-1";
+    }
+  }
+
+  Future<String> signData(String data) async {
+    try {
+      final signedData = await platform.invokeMethod('signData', {'data': data});
+      return signedData;
+    } on PlatformException catch (e) {
+      print("Failed to sign data: '${e.message}'.");
+      return "-1";
+    }
+  }
+
+  Future<String> verifyData(String data, String signature) async {
+    try {
+      final verifiedData = await platform.invokeMethod('verifyData', {'data': data, 'signature': signature});
+      return verifiedData;
+    } on PlatformException catch (e) {
+      print("Failed to verify data: '${e.message}'.");
+      return "-1";
+    }
+  }
+
+
 }
 

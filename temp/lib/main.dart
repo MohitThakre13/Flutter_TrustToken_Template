@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:temp/utils/native.dart';
 
@@ -72,6 +73,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     final _textcontroller = TextEditingController();
+    late String encText = "";
     // This method is rerun every time setState is called, for instance as done
     // by the _incrementCounter method above.
     //
@@ -143,7 +145,20 @@ class _MyHomePageState extends State<MyHomePage> {
                 print(k2);
               },
               child: Text("Login"),
-            )
+            ),
+          Text("Encrypted Text: $encText"),
+          ElevatedButton(
+          onPressed: () async {
+    UsbManager s = new UsbManager();
+    var k2 = await s.encryptData("Hello World");
+    if (kDebugMode) {
+      print(k2);
+    }
+    setState(() {
+      encText = k2;
+    });
+    },
+      child: Text("Login"),)
           ],
         ),
       ),
@@ -159,6 +174,7 @@ class _MyHomePageState extends State<MyHomePage> {
         tooltip: 'Increment',
         child: const Icon(Icons.usb),
       ), // This trailing comma makes auto-formatting nicer for build methods.
+
     );
   }
 }
